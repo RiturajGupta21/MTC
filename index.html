@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Theorem</title>
+    <style>
+        body {
+            margin: 0;
+            color: orange;
+        }
+
+        #particles-js {
+            background: black;
+            height: 100vh;
+        }
+
+        .center {
+            position: absolute;
+            text-align: center;
+            top: 30%;
+            width: 100%;
+        }
+
+        .centerform {
+            margin-left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js">
+        <div class="center">
+            <h2>Master Theorem Calculator</h2>
+            <p>Valid Form:<span> </span>\(T(n) \: = \: a \: T(n \, / \, b)
+                \, + \, Θ(n^k \, (\log n)^i)\).</p>
+            <form class="centerform">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="a">\(a\):</label></td>
+                            <td><input type="number" id="a" oninput="app.calculate();" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="b">\(b\):</label></td>
+                            <td><input type="number" id="b" oninput="app.calculate();" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="k">\(k\):</label></td>
+                            <td><input type="number" id="k" oninput="app.calculate();" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="i">\(i\):</label></td>
+                            <td><input type="number" id="i" oninput="app.calculate();" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="reset" onclick="app.cleanOutput();">Clear</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            Recurrence Generated:<span> </span><span id="recurrence"><span> </span></span><br />
+            Time Complexity:<span> </span><span id="tc"><span> </span></span>
+            <script src="./mastertheorem.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+                async="async"></script>
+        </div>
+    </div>
+    <!-- <script src="./MathJax.js"></script> -->
+    <script src="/node_modules/particles.js/particles.js">
+    </script>
+    <script src="/node_modules/particles.js/demo/js/app.js">
+    </script>
+</body>
+</body>
+
+</html>

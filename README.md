@@ -1,0 +1,2 @@
+# MTC
+Master Theorem Calculator

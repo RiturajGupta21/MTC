@@ -42,6 +42,7 @@
             <h2>Master Theorem Calculator</h2>
             <p>Valid Form:<span> </span>\(T(n) \: = \: a \: T(n \, / \, b)
                 \, + \, Θ(n^k \, (\log n)^i)\).</p>
+            <p>*Mostly \((log n)^i\) is 1 as i = 0. </p>
             <form class="centerform">
                 <table>
                     <tbody>
@@ -59,7 +60,7 @@
                         </tr>
                         <tr>
                             <td><label for="i">\(i\):</label></td>
-                            <td><input type="number" id="i" oninput="app.calculate();" /></td>
+                            <td><input type="number" id="i" value="0" oninput="app.calculate();" /></td>
                         </tr>
                         <tr>
                             <td></td>
